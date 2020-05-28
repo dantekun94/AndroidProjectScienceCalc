@@ -1,0 +1,49 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="buttons_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="gray_buttons" parent="buttons_style">
+        <item name="android:textColor">#818181</item>
+    </style>
+
+    <style name="orange_buttons" parent="buttons_style">
+        <item name="android:textColor">#e47637</item>
+    </style>
+
+    <style name="black_buttons" parent="buttons_style">
+        <item name="android:textColor">#404140</item>
+    </style>
+
+    <style name="foto_vertical_views">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_weight">0.01</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+
+    <style name="CalculatorTextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+</resources>

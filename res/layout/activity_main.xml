@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/calculator_view"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/view_prevEcuatie"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:gravity="bottom|end"
+            android:maxLines="1"
+            android:paddingRight="10sp"
+            android:textColor="#000"
+            android:textSize="30sp"
+            tools:text="0" />
+
+        <ImageView
+            android:id="@+id/toggle_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/view_rezultat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="end|center"
+            android:maxLines="1"
+            android:paddingRight="10sp"
+            android:textColor="#454545"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:text="0" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calculator_view">
+
+        <RelativeLayout
+            android:id="@+id/calculator_key_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/row_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView style="@style/buttons_style" />
+
+                <TextView
+                    android:id="@+id/view_radDegSwitch"
+                    style="@style/gray_buttons"
+                    android:text="deg" />
+
+                <TextView
+                    android:id="@+id/sinus"
+                    style="@style/gray_buttons"
+                    android:text="sin" />
+
+                <TextView
+                    android:id="@+id/cosinus"
+                    style="@style/gray_buttons"
+                    android:text="cos" />
+
+                <TextView
+                    android:id="@+id/tangenta"
+                    style="@style/gray_buttons"
+                    android:text="tan" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/row_one_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_one" />
+
+            <LinearLayout
+                android:id="@+id/row_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_one_view"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/putere"
+                    style="@style/gray_buttons"
+                    android:text="x\u02B8" />
+
+                <TextView
+                    android:id="@+id/logaritm"
+                    style="@style/gray_buttons"
+                    android:text="lg" />
+
+                <TextView
+                    android:id="@+id/logaritmNatural"
+                    style="@style/gray_buttons"
+                    android:text="ln" />
+
+                <TextView
+                    android:id="@+id/parantezaDeschisa"
+                    style="@style/gray_buttons"
+                    android:text="(" />
+
+                <TextView
+                    android:id="@+id/parantezaInchisa"
+                    style="@style/gray_buttons"
+                    android:text=")" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/row_two_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_two" />
+
+            <LinearLayout
+                android:id="@+id/row_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_two_view"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/radical"
+                    style="@style/gray_buttons"
+                    android:text="√x"/>
+
+                <TextView
+                    android:id="@+id/tastaReset"
+                    style="@style/orange_buttons"
+                    android:text="C" />
+
+                <TextView
+                    android:id="@+id/backspace"
+                    style="@style/orange_buttons"
+                    android:text="⌫" />
+
+                <TextView
+                    android:id="@+id/procent"
+                    style="@style/orange_buttons"
+                    android:text="%" />
+
+                <TextView
+                    android:id="@+id/impartire"
+                    style="@style/orange_buttons"
+                    android:text="÷" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/row_three_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_three"/>
+
+            <LinearLayout
+                android:id="@+id/row_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_three_view"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/factorial"
+                    style="@style/gray_buttons"
+                    android:text="x!" />
+
+                <TextView
+                    android:id="@+id/tasta7"
+                    style="@style/black_buttons"
+                    android:text="7" />
+
+                <TextView
+                    android:id="@+id/tasta8"
+                    style="@style/black_buttons"
+                    android:text="8" />
+
+                <TextView
+                    android:id="@+id/tasta9"
+                    style="@style/black_buttons"
+                    android:text="9" />
+
+                <TextView
+                    android:id="@+id/inmultire"
+                    style="@style/orange_buttons"
+                    android:text="x" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/row_four_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_four"/>
+
+            <LinearLayout
+                android:id="@+id/row_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_four_view"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/unuSupraX"
+                    style="@style/gray_buttons"
+                    android:text="x\u207B\u00B9" />
+
+                <TextView
+                    android:id="@+id/tasta4"
+                    style="@style/black_buttons"
+                    android:text="4" />
+
+                <TextView
+                    android:id="@+id/tasta5"
+                    style="@style/black_buttons"
+                    android:text="5" />
+
+                <TextView
+                    android:id="@+id/tasta6"
+                    style="@style/black_buttons"
+                    android:text="6" />
+
+                <TextView
+                    android:id="@+id/scadere"
+                    style="@style/orange_buttons"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/row_five_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_five"/>
+
+            <LinearLayout
+                android:id="@+id/row_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_five_view"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/row_six_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_six" />
+
+            <LinearLayout
+                android:id="@+id/row_seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_six_view"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pi"
+                    style="@style/gray_buttons"
+                    android:text="π" />
+
+                <TextView
+                    android:id="@+id/tasta1"
+                    style="@style/black_buttons"
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/tasta2"
+                    style="@style/black_buttons"
+                    android:text="2" />
+
+                <TextView
+                    android:id="@+id/tasta3"
+                    style="@style/black_buttons"
+                    android:text="3" />
+
+                <TextView
+                    android:id="@+id/adunare"
+                    style="@style/orange_buttons"
+                    android:text="+" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/row_seven_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_seven" />
+
+            <LinearLayout
+                android:id="@+id/row_eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_seven_view"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/buttons_style" />
+
+                <TextView
+                    android:id="@+id/tastaE"
+                    style="@style/black_buttons"
+                    android:text="e" />
+
+                <TextView
+                    android:id="@+id/tasta0"
+                    style="@style/black_buttons"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/virgula"
+                    style="@style/black_buttons"
+                    android:text="." />
+
+                <TextView
+                    android:id="@+id/egal"
+                    style="@style/orange_buttons"
+                    android:text="=" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/row_eight_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_eight" />
+
+            <LinearLayout
+                android:id="@+id/row_nine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_eight_view"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/row_nine_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_nine" />
+
+            <LinearLayout
+                android:id="@+id/row_ten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_nine_view"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/row_ten_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_nine" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
